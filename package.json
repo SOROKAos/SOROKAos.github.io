@@ -1,0 +1,14 @@
+{
+    "name": "my-survey",
+    "version": "1.0.0",
+    "description": "A simple survey web application",
+    "main": "index.js",
+    "scripts": {
+        "start": "live-server public"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "live-server": "^1.2.1"
+    }
+}
