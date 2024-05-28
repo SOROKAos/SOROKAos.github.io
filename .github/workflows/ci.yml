@@ -36,6 +36,6 @@
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ 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 }}
           publish_dir: ./public
   
