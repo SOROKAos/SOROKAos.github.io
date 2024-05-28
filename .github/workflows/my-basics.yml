@@ -1,0 +1,17 @@
+#-------------------------------------
+# Ci і CD інтиграція в Githab Action 
+#
+#
+#-------------------------------------
+name: Ci
+on: 
+  push:
+    branches:
+       - master
+
+jobs:
+  my_testing:
+
+  run-on: ubuntu-latest
+
+  s
