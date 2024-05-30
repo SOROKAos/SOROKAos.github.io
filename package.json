@@ -4,8 +4,8 @@
     "description": "A simple survey web application",
     "main": "index.js",
     "scripts": {
-        "start": "live-server public"
-        "build": "cp -r src/* public/"
+        "start": "live-server public",
+        "build": "cp -r src/* public/",
     },
     "author": "",
     "license": "ISC",
