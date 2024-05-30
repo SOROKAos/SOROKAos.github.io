@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "live-server public",
-        "build": "cp -r src/* public/",
+        "build": "cp -r src/* public/"
     },
     "author": "",
     "license": "ISC",
