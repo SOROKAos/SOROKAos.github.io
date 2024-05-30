@@ -2,16 +2,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const app = document.getElementById('app');
 
     const questions = [
-        { question: "Do you prefer high-level or low-level languages?", choices: ["High-level", "Low-level"] },
-        { question: "Do you enjoy working with web technologies?", choices: ["Yes", "No"] },
-        { question: "Do you like statically typed languages?", choices: ["Yes", "No"] },
-        { question: "Are you interested in data science?", choices: ["Yes", "No"] },
-        { question: "Do you prefer functional programming?", choices: ["Yes", "No"] },
-        { question: "Do you want a language that's beginner-friendly?", choices: ["Yes", "No"] },
-        { question: "Do you need a language for system programming?", choices: ["Yes", "No"] },
-        { question: "Do you prefer concise syntax?", choices: ["Yes", "No"] },
-        { question: "Are you interested in mobile app development?", choices: ["Yes", "No"] },
-        { question: "Do you like working with enterprise solutions?", choices: ["Yes", "No"] }
+        { question: "Ви віддаєте перевагу мовам високого чи низького рівня?", choices: ["Висоворівневі", "Низькорівневі"] },
+        { question: "Вам подобається працювати з веб-технологіями?", choices: ["Так", "Ні"] },
+        { question: "Вам подобаються статично задані мови?", choices: ["Так", "Ні"] },
+        { question: "Ви цікавитесь наукою про дані?", choices: ["Так", "Ні"] },
+        { question: "Ви віддаєте перевагу функціональному програмуванню?", choices: ["Так", "Ні"] },
+        { question: "Вам потрібна мова, зручна для початківців?", choices: ["Так", "Ні"] },
+        { question: "Вам потрібна мова для системного програмування?", choices: ["Так", "Ні"] },
+        { question: "Віддаєте перевагу лаконічному синтаксису?", choices: ["Так", "Ні"] },
+        { question: "Вас цікавить розробка мобільних додатків?", choices: ["Так", "Ні"] },
+        { question: "Вам подобається працювати з корпоративними рішеннями?", choices: ["Так", "Ні"] }
     ];
 
     let currentQuestionIndex = 0;
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
 
             const nextButton = document.createElement('button');
-            nextButton.textContent = 'Next';
+            nextButton.textContent = 'Наступне';
             nextButton.onclick = function() {
                 const selectedChoice = document.querySelector(`input[name="question${currentQuestionIndex}"]:checked`);
                 if (selectedChoice) {
@@ -42,12 +42,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     currentQuestionIndex++;
                     renderQuestion();
                 } else {
-                    alert('Please select an answer.');
+                    alert('Бульласка виберіть відповідь');
                 }
             };
 
             const backButton = document.createElement('button');
-            backButton.textContent = 'Back';
+            backButton.textContent = 'Попереднє';
             backButton.onclick = function() {
                 if (currentQuestionIndex > 0) {
                     currentQuestionIndex--;
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
             app.appendChild(questionDiv);
         } else {
             const result = calculateResult(responses);
-            app.innerHTML = `<p>Based on your answers, the programming language that suits you best is: ${result}</p>`;
+            app.innerHTML = `<p> На основі ваших відповідей ми визначимо мову програмування, яка вам найбільше підходить: ${result}</p>`;
         }
     }
 
