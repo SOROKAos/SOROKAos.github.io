@@ -36,10 +36,10 @@
         run: npm run build
 
       - name: Build docker
-        run: docket -v 
         run: docker ps 
-        run: docker bild -t myapp:latest .
       
+      - name: Build version
+        run: docket -v 
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
