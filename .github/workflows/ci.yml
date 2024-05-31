@@ -36,8 +36,9 @@
         run: npm run build
 
       - name: Build docker
-        run: docker push myregistry/myapp:latest
+        run: docker bild -t myapp:latest . 
       
+
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
