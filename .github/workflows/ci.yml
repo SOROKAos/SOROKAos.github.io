@@ -36,10 +36,8 @@
         run: npm run build
 
       - name: Build docker
-        run: docker ps 
+        run: docker ps -a
       
-      - name: Build version
-        run: docket -v 
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
