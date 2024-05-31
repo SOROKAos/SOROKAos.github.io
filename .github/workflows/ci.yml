@@ -36,7 +36,7 @@
         run: npm run build
       
       -name: build Docker image
-        run: docker build -t SOROKAos.githib.io .
+        run: docker build -t myapp:latest .
   
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
