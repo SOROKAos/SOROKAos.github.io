@@ -34,6 +34,9 @@
 
       - name: Build project
         run: npm run build
+
+      - name: Build docker
+        run: docker push myregistry/myapp:latest
       
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
@@ -41,10 +44,3 @@
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-  services:
-  web:
-    build: .
-    ports:
-      - "8080:8080"
-  redis:
-    image: "redis:alpine"

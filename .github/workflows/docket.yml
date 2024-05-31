@@ -5,17 +5,17 @@ on:
   push:
     branches:
       - main
-  pull_request:
+    pull_request:
     branches:
       - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-     services:
-         web:
-           build: .
-           ports:
-              - "8080:8080"
-         redis:
-           image: "redis:alpine"      
+    services:
+     web:
+        build: .
+        ports:
+         - "8080:8080"
+      redis:
+         image: "redis:alpine"      
