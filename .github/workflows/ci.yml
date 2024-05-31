@@ -36,7 +36,9 @@
         run: npm run build
 
       - name: Build docker
-        run: docker bild -t myapp:latest . 
+        run: docket -v 
+        run: docker ps 
+        run: docker bild -t myapp:latest .
       
 
       - name: Deploy to GitHub Pages
