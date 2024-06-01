@@ -5,11 +5,15 @@
     "main": "index.js",
     "scripts": {
         "start": "live-server public -- port=8080",
-        "build": "cp -r src/* public/"
+        "build": "cp -r src/* public/",
+        "test": "jest"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
         "live-server": "^1.2.1"
-    }
+    },
+    "devDependencies": {
+        "jest": "^27.0.0"
+      }
 }

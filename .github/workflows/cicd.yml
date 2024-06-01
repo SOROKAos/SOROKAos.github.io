@@ -19,26 +19,34 @@
   
       steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
   
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '18'
   
       - name: Install dependencies
         run: npm install
   
       - name: Run tests
-        run: echo "No tests yet"
+        run: npm test
 
       - name: Build project
         run: npm run build
 
-      - name: Build docker
-        run: docker ps -a
+      - name: Build docker image
+        run: docker build -t my-survey .
       
 
+      - name: Run Docker container
+        run: docker run -d -p 8080:8080 --name my-survey-container my-survey
+
+      - name: Verify Docker container is running
+        run: |
+          sleep 10
+          curl -f http://localhost:8080 || (docker logs my-survey-container && exit 1)
+      
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4

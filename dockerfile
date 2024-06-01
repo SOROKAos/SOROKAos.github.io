@@ -20,4 +20,4 @@ RUN npm run build
 EXPOSE 8080
 
 # Команда для запуску вашого додатку
-CMD ["npm", "start"]
+CMD ["npx", "live-server", "public", "--port=8080"]
