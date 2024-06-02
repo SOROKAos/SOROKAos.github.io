@@ -47,6 +47,9 @@
           sleep 10
           curl -f http://localhost:8080 || (docker logs my-survey-container && exit 1)
       
+      - name: Docker container running
+        run: docker ps
+      
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
