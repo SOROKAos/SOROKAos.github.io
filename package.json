@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "live-server public -- port=8080",
-        "build": "cp -r src/* public/",
+        "build": "cp -r  public/",
         "test": "jest"
     },
     "author": "",
