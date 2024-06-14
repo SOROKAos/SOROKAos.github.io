@@ -2,7 +2,7 @@
     "name": "my-survey",
     "version": "1.0.0",
     "description": "A simple survey web application",
-    "main": "app.js",
+    "main": "./src/app.js",
     "scripts": {
         "start": "live-server public -- port=8080",
         "build": "cp -r src/* public/",
